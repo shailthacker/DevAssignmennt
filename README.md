@@ -5,10 +5,14 @@
 Take any application and create jenkins dsl pipeline
 and provide readme file with details and prerequiresits required to run pipeline on any server.
 
-==============================================================================================
+===================================================================================
 
 ## Prerequiresits
-- Docker is installed on server
+- Linux or Windows machine with:
+    - 512 MB of RAM
+    - 10 GB of drive space for Jenkins and your Docker images and containers.
+
+- Docker installed on server
 
 
 ## Steps to run Jenkins on docker container
@@ -21,7 +25,7 @@ and provide readme file with details and prerequiresits required to run pipeline
   - If we want to access jeenkins docker container: <br /> ```$ docker exec -it container-id bash```
 
 
-- Jenkins is up on port 8080 on your server, to verify go to you browser and open ```server.ip:8080```
+- Jenkins is up on port 8080 on your server, to verify go to you browser and open ```http://server.ip:8080```
 
 - Browser will re-direct us to: <br /> ![Image of JenkinsFirstTime]()
 
@@ -30,3 +34,9 @@ and provide readme file with details and prerequiresits required to run pipeline
 - Copy and paste to the browser and select installed suggested plugins: <br /> ![Image_of_plugin]()
 
 - Create Admin user and start using jenkins
+
+## Steps to run on Jenkins
+- Login to Jenkins web UI
+- Go to Manage Jenkins -> Manage Plugin
+- Click on Availabe tab and search Job dsl
+- Install Job dsl plugin
