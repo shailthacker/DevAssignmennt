@@ -50,4 +50,6 @@ and provide readme file with details and prerequiresits required to run pipeline
 - From the Definition field, choose the Pipeline script from SCM option. This option instructs Jenkins to obtain your Pipeline from Source Control Management (SCM), which will be your git repository
 - From the SCM field, choose Git
 - Set script path as ```groovy_scripts/JobDSL.groovy```
-- 
+- Click on ```Build Now```
+- seed_pipeline will create test-pipeline and execute it
+- ![pipeline_image]()
