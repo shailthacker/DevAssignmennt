@@ -35,8 +35,19 @@ and provide readme file with details and prerequiresits required to run pipeline
 
 - Create Admin user and start using jenkins
 
-## Steps to run on Jenkins
+
+## Steps to run on server
+- Chnage directory on Server: <br /> ```cd /home/jenkins/data```
+- Clone GitHub repo: <br /> ```git clone https://github.com/shailthacker/DevAssignmennt.git```
+- 
+
+## Steps to run on Jenkins UI
 - Login to Jenkins web UI
 - Go to Manage Jenkins -> Manage Plugin
 - Click on Availabe tab and search Job dsl
 - Install Job dsl plugin
+- Create new pipeline : <br /> ![Create_pipeline]()
+- From the Definition field, choose the Pipeline script from SCM option. This option instructs Jenkins to obtain your Pipeline from Source Control Management (SCM), which will be your git repository
+- From the SCM field, choose Git
+- Set script path as ```groovy_scripts/JobDSL.groovy```
+- 
