@@ -27,11 +27,14 @@ and provide readme file with details and prerequiresits required to run pipeline
 
 - Jenkins is up on port 8080 on your server, to verify go to you browser and open ```http://server.ip:8080```
 
-- Browser will re-direct us to: <br /> ![Image of JenkinsFirstTime]()
+- Browser will re-direct us to: <br /> ![Image of JenkinsFirstTime](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04.png)
 
 - Move inside jenkins docker container and get the secret key to initate with jenkins: <br /> ```$ cat /var/jenkins_home/secrets/initialAdminPassword```
 
-- Copy and paste to the browser and select installed suggested plugins: <br /> ![Image_of_plugin]()
+- Copy and paste to the browser and select installed suggested plugins: <br /> ![Image_of_plugin](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04%20at%201.39.01%20PM.png)
+
+- Default plugins will start installing: <br /> ![Plugin_installation](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04%20at%201.41.17%20PM.png)
+
 
 - Create Admin user and start using jenkins
 
@@ -39,17 +42,16 @@ and provide readme file with details and prerequiresits required to run pipeline
 ## Steps to run on server
 - Chnage directory on Server: <br /> ```cd /home/jenkins/data```
 - Clone GitHub repo: <br /> ```git clone https://github.com/shailthacker/DevAssignmennt.git```
-- 
 
 ## Steps to run on Jenkins UI
 - Login to Jenkins web UI
 - Go to Manage Jenkins -> Manage Plugin
 - Click on Availabe tab and search Job dsl
 - Install Job dsl plugin
-- Create new pipeline : <br /> ![Create_pipeline]()
+- Create new pipeline : <br /> ![Create_pipeline](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04%20at%209.36.10%20PM.png)
 - From the Definition field, choose the Pipeline script from SCM option. This option instructs Jenkins to obtain your Pipeline from Source Control Management (SCM), which will be your git repository
 - From the SCM field, choose Git
-- Set script path as ```groovy_scripts/JobDSL.groovy```
+- Set script path ```groovy_scripts/JobDSL.groovy``` as mentiond in below image: <br /> ![set_path](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04%20at%209.33.14%20PM.png)
 - Click on ```Build Now```
 - seed_pipeline will create test-pipeline and execute it
-- ![pipeline_image]()
+- ![pipeline_image](https://github.com/shailthacker/DevAssignmennt/blob/main/images/Screenshot%202021-03-04%20at%209.47.49%20PM.png)
