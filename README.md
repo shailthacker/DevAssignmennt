@@ -1,6 +1,32 @@
 # DevAssignment
 
-### Task to perform
+## Task to perform
 
 Take any application and create jenkins dsl pipeline
 and provide readme file with details and prerequiresits required to run pipeline on any server.
+
+==============================================================================================
+
+## Prerequiresits
+- Docker is installed on server
+
+
+## Steps to run Jenkins on docker container
+- Pull jenkins docker image from docker hub: <br />```$ docker pull jenkins/jenkins:lts```
+
+- Create a new directory inside your server to store the jenkins data: <br /> ```$ mkdir /home/jenkins/data```
+
+- Run jenkins on docker container: <br /> ```$ docker run -d -v /home/jenkins/data:/var/jenkins_home -p 8080:8080 jenkins/jenkins:lts```
+  - If we want to connect slave agent we need to map port 50000: <br /> ```$ docker run -d -v /home/jenkins/data:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts```
+  - If we want to access jeenkins docker container: <br /> ```$ docker exec -it container-id bash```
+
+
+- Jenkins is up on port 8080 on your server, to verify go to you browser and open ```server.ip:8080```
+
+- Browser will re-direct us to: <br /> ![Image of JenkinsFirstTime]()
+
+- Move inside jenkins docker container and get the secret key to initate with jenkins: <br /> ```$ cat /var/jenkins_home/secrets/initialAdminPassword```
+
+- Copy and paste to the browser and select installed suggested plugins: <br /> ![Image_of_plugin]()
+
+- Create Admin user and start using jenkins
